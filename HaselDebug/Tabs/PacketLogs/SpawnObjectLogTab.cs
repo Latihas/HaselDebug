@@ -32,11 +32,11 @@ public unsafe partial class SpawnObjectLogTab : PacketLogTab<SpawnObjectPacket>,
         _hook ??= _gameInteropProvider.HookFromAddress<PacketDispatcher.Delegates.HandleSpawnObjectPacket>(PacketDispatcher.MemberFunctionPointers.HandleSpawnObjectPacket, HandleSpawnObjectPacketDetour);
 
         var enabled = IsPacketLogEnabled;
-        if (ImGui.Checkbox("Enabled", ref enabled))
+        if (ImGui.Checkbox("启用", ref enabled))
             TogglePacketLog();
 
         ImGui.SameLine();
-        if (ImGui.Button("Clear"))
+        if (ImGui.Button("清空"))
             Clear();
 
         using var table = ImRaii.Table("SpawnObjectTable"u8, 2, ImGuiTableFlags.Borders | ImGuiTableFlags.ScrollY | ImGuiTableFlags.RowBg | ImGuiTableFlags.Resizable);

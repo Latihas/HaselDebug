@@ -88,7 +88,7 @@ public unsafe partial class LogMessageLogTab : DebugTab, IDisposable
 
         ImGui.SameLine();
 
-        if (ImGui.Button("Clear"))
+        if (ImGui.Button("清空"))
         {
             _logMessages.Clear();
         }

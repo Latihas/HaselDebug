@@ -31,7 +31,7 @@ public partial class ExcelSheetWrapper<T> : IExcelSheetWrapper where T : struct
 
         ImGui.SameLine();
         var count = (_table.FilteredRows ?? _table.Rows).Count;
-        ImGui.Text($"{count} 行{(count != 1 ? "s" : "")}");
+        ImGui.Text($"{count} 行");
 
         ImGui.SameLine();
         ShowColumnSelector();

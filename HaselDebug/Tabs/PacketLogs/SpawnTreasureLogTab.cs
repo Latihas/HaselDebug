@@ -31,11 +31,11 @@ public unsafe partial class SpawnTreasureLogTab : PacketLogTab<SpawnTreasurePack
         _hook ??= _gameInteropProvider.HookFromAddress<PacketDispatcher.Delegates.HandleSpawnTreasurePacket>(PacketDispatcher.MemberFunctionPointers.HandleSpawnTreasurePacket, HandleSpawnTreasurePacketDetour);
 
         var enabled = IsPacketLogEnabled;
-        if (ImGui.Checkbox("Enabled", ref enabled))
+        if (ImGui.Checkbox("启用", ref enabled))
             TogglePacketLog();
 
         ImGui.SameLine();
-        if (ImGui.Button("Clear"))
+        if (ImGui.Button("清空"))
             Clear();
 
         using var table = ImRaii.Table("SpawnTreasureTable"u8, 2, ImGuiTableFlags.Borders | ImGuiTableFlags.ScrollY | ImGuiTableFlags.RowBg | ImGuiTableFlags.Resizable);

@@ -58,7 +58,7 @@ public unsafe partial class AtkEventsTab : DebugTab, IDisposable
     {
         _dispatchEventHook ??= _gameInteropProvider.HookFromAddress<AtkEventDispatcher.Delegates.DispatchEvent>(AtkEventDispatcher.MemberFunctionPointers.DispatchEvent, DispatchEventDetour);
 
-        if (ImGui.Checkbox("Enabled", ref _enabled))
+        if (ImGui.Checkbox("启用", ref _enabled))
         {
             if (_enabled && !_dispatchEventHook.IsEnabled)
             {
@@ -71,7 +71,7 @@ public unsafe partial class AtkEventsTab : DebugTab, IDisposable
         }
 
         ImGui.SameLine();
-        if (ImGui.Button("Clear"))
+        if (ImGui.Button("清空"))
             Clear();
 
         using var table = ImRaii.Table("EventTable"u8, 3, ImGuiTableFlags.Borders | ImGuiTableFlags.ScrollY | ImGuiTableFlags.RowBg | ImGuiTableFlags.Resizable);

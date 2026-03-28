@@ -70,7 +70,7 @@ public partial class AddonAtkValuesObserverWindow : SimpleWindow
     {
         using (ImRaii.Disabled(_refreshValues.Count == 0))
         {
-            if (ImGui.Button("Clear"u8))
+            if (ImGui.Button("清空"u8))
             {
                 foreach (var entry in _refreshValues)
                     entry.Dispose();

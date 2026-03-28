@@ -51,11 +51,11 @@ public unsafe partial class ActorControlLogTab : PacketLogTab<ActorControlEntry>
         _hook ??= _gameInteropProvider.HookFromAddress<PacketDispatcher.Delegates.HandleActorControlPacket>(PacketDispatcher.MemberFunctionPointers.HandleActorControlPacket, HandleActorControlPacketDetour);
 
         var enabled = IsPacketLogEnabled;
-        if (ImGui.Checkbox("Enabled", ref enabled))
+        if (ImGui.Checkbox("启用", ref enabled))
             TogglePacketLog();
 
         ImGui.SameLine();
-        if (ImGui.Button("Clear"))
+        if (ImGui.Button("清空"))
             Clear();
 
         using var table = ImRaii.Table("ActorControlLogTable"u8, 7, ImGuiTableFlags.Borders | ImGuiTableFlags.ScrollY | ImGuiTableFlags.RowBg | ImGuiTableFlags.Resizable);

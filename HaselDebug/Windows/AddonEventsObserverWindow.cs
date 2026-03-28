@@ -86,7 +86,7 @@ public partial class AddonEventsObserverWindow : SimpleWindow
     {
         using (ImRaii.Disabled(_events.Count == 0))
         {
-            if (ImGui.Button("Clear"u8))
+            if (ImGui.Button("清空"u8))
             {
                 Clear();
             }

@@ -94,7 +94,7 @@ public unsafe partial class AtkHandlerCallsTab : DebugTab, IDisposable
             return;
         }
 
-        if (ImGui.Checkbox("Enabled"u8, ref _enabled))
+        if (ImGui.Checkbox("启用"u8, ref _enabled))
         {
             if (_enabled && !_callHandlerDetour.IsEnabled)
             {
@@ -110,7 +110,7 @@ public unsafe partial class AtkHandlerCallsTab : DebugTab, IDisposable
 
         using (ImRaii.Disabled(_calls.Count == 0))
         {
-            if (ImGui.Button("Clear"u8))
+            if (ImGui.Button("清空"u8))
             {
                 foreach (var entry in _calls)
                     entry.Dispose();

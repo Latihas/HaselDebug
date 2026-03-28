@@ -18,7 +18,7 @@ public unsafe class RaptureLogModuleTab : DebugTab
         ImGui.Text($"CurrentLogIndex: {raptureLogModule->LogModule.LogMessageIndex}");
         ImGui.Text($"LogMessageCount: {raptureLogModule->LogModule.LogMessageCount}");
 
-        if (ImGui.Button("Clear"))
+        if (ImGui.Button("清空"))
         {
             _messages.Clear();
         }

@@ -150,7 +150,7 @@ public unsafe partial class InventoryOperationsTab : DebugTab, IDisposable
             return;
         }
 
-        if (ImGui.Checkbox("Enabled"u8, ref _enabled))
+        if (ImGui.Checkbox("启用"u8, ref _enabled))
         {
             if (_enabled)
             {
@@ -189,7 +189,7 @@ public unsafe partial class InventoryOperationsTab : DebugTab, IDisposable
 
         using (ImRaii.Disabled(_actions.Count == 0))
         {
-            if (ImGui.Button("Clear"u8))
+            if (ImGui.Button("清空"u8))
             {
                 foreach (var action in _actions)
                     action.Dispose();

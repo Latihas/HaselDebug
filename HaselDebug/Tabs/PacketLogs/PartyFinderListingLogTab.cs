@@ -29,11 +29,11 @@ public unsafe partial class PartyFinderListingLogTab : PacketLogTab<CrossRealmLi
         _hook ??= _gameInteropProvider.HookFromAddress<InfoProxyCrossRealm.Delegates.ReceiveListing>((nint)InfoProxyCrossRealm.MemberFunctionPointers.ReceiveListing, ReceiveListingDetour);
 
         var enabled = IsPacketLogEnabled;
-        if (ImGui.Checkbox("Enabled", ref enabled))
+        if (ImGui.Checkbox("启用", ref enabled))
             TogglePacketLog();
 
         ImGui.SameLine();
-        if (ImGui.Button("Clear"))
+        if (ImGui.Button("清空"))
             Clear();
 
         using var table = ImRaii.Table("PartyFinderListingLogTable"u8, 2, ImGuiTableFlags.Borders | ImGuiTableFlags.ScrollY | ImGuiTableFlags.RowBg | ImGuiTableFlags.Resizable);
