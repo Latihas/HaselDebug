@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.Cutscenes;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class CutscenesTab(CutscenesTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Cutscenes";
+    public override string Title => "过场动画";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()

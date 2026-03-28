@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.TripleTriadCards;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class TripleTriadCardsTab(TripleTriadCardsTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Triple Triad Cards";
+    public override string Title => "九宫幻卡";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()

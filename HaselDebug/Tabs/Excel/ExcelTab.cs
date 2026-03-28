@@ -107,13 +107,13 @@ public unsafe partial class ExcelTab : DebugTab
 
         var regionAvail = ImGui.GetContentRegionAvail();
 
-        if (ImGui.Checkbox("Use Experimental Sheets", ref _useExperimentalSheets))
+        if (ImGui.Checkbox("使用实验性表格", ref _useExperimentalSheets))
         {
             LoadSheetTypes();
         }
 
         ImGui.SameLine();
-        if (ImGui.Checkbox("Show Raw Sheets", ref _showRawSheets))
+        if (ImGui.Checkbox("显示原始表格", ref _showRawSheets))
         {
             _pluginConfig.Excel2Tab_ShowRawSheets = _showRawSheets;
             _pluginConfig.Save();
@@ -228,7 +228,7 @@ public unsafe partial class ExcelTab : DebugTab
     {
         ImGui.Separator();
         ImGui.AlignTextToFramePadding();
-        ImGui.Text("Search in all sheets:");
+        ImGui.Text("在所有表格中搜索:");
         ImGui.SameLine();
 
         ImGui.SetNextItemWidth(300);
@@ -236,7 +236,7 @@ public unsafe partial class ExcelTab : DebugTab
             ImGui.InputTextWithHint("##GlobalSearch", "Enter search term...", ref _globalSearchTerm, 256, ImGuiInputTextFlags.AutoSelectAll);
 
         ImGui.SameLine();
-        ImGui.Checkbox("MacroString", ref _searchMacroString);
+        ImGui.Checkbox("宏字符串", ref _searchMacroString);
 
         ImGui.SameLine();
         if (_isSearching && ImGui.Button("Cancel"))

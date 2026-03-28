@@ -31,7 +31,7 @@ public partial class ExcelSheetWrapper<T> : IExcelSheetWrapper where T : struct
 
         ImGui.SameLine();
         var count = (_table.FilteredRows ?? _table.Rows).Count;
-        ImGui.Text($"{count} row{(count != 1 ? "s" : "")}");
+        ImGui.Text($"{count} 行{(count != 1 ? "s" : "")}");
 
         ImGui.SameLine();
         ShowColumnSelector();
@@ -42,7 +42,7 @@ public partial class ExcelSheetWrapper<T> : IExcelSheetWrapper where T : struct
 
     private void ShowColumnSelector()
     {
-        if (ImGui.Button($"{_table.Columns.Count} of {_table.AvailableColumns.Count} columns shown"))
+        if (ImGui.Button($"已显示{_table.Columns.Count} / {_table.AvailableColumns.Count} 列"))
         {
             ImGui.OpenPopup("ColumnsPopup");
         }

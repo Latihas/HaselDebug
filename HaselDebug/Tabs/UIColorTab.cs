@@ -12,7 +12,7 @@ public unsafe partial class UIColorTab : DebugTab
     private readonly ExcelService _excelService;
     private readonly TextService _textService;
 
-    public override string Title => "UIColor";
+    public override string Title => "UI颜色";
     public override bool DrawInChild => false;
 
     public override void Draw()

@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.UnlockLinks;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class UnlockLinksTab(UnlockLinksTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Unlock Links";
+    public override string Title => "解锁链接";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()

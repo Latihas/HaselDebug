@@ -3,11 +3,11 @@
   <!-- Project settings -->
   <PropertyGroup>
     <Name>HaselDebug</Name>
-    <Version>1.51.1</Version>
+    <Version>1.51.1.1</Version>
     <Author>Haselnussbomber</Author>
-    <RepoUrl>https://github.com/Haselnussbomber/HaselDebug</RepoUrl>
-    <Punchline>Various tools to debug things.</Punchline>
-    <Description>For developers.</Description>
+    <RepoUrl>https://github.com/Latihas/HaselDebug</RepoUrl>
+    <Punchline>各种调试工具(汉化中)</Punchline>
+    <Description>开发者工具</Description>
   </PropertyGroup>
 
   <!-- Build settings -->
@@ -16,6 +16,9 @@
     <DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
     <DefineConstants>$(DefineConstants);AUTOCTOR_EMBED_ATTRIBUTES</DefineConstants>
     <NoWarn>$(NoWarn);Dalamud001</NoWarn>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 
   <!-- Dalamud.NET.Sdk settings -->
@@ -65,4 +68,8 @@
   <ItemGroup>
     <ProjectReference Include="..\HaselCommon\HaselCommon\HaselCommon.csproj" />
   </ItemGroup>
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == ''">
+    <DalamudLibPath>$(appdata)\XIVLauncherCN\addon\Hooks\dev</DalamudLibPath>
+    <AssemblySearchPaths>$(AssemblySearchPaths);$(DalamudLibPath)</AssemblySearchPaths>
+  </PropertyGroup>
 </Project>

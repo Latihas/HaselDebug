@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.Spearfish;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class SpearfishTab(SpearfishTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Spearfish";
+    public override string Title => "刺鱼";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()

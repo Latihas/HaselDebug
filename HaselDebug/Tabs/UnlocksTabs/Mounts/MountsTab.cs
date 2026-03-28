@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.Mounts;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class MountsTab(MountsTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Mounts";
+    public override string Title => "坐骑";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()

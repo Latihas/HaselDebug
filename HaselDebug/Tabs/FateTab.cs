@@ -29,7 +29,7 @@ public partial class FateTab : DebugTab
         ImGui.TableSetupColumn("Icon"u8, ImGuiTableColumnFlags.WidthFixed, 30);
         ImGui.TableSetupColumn("MapIcon"u8, ImGuiTableColumnFlags.WidthFixed, 30);
         ImGui.TableSetupColumn("Name"u8, ImGuiTableColumnFlags.WidthStretch);
-        ImGui.TableSetupColumn("Progress"u8, ImGuiTableColumnFlags.WidthFixed, 55);
+        ImGui.TableSetupColumn("进度"u8, ImGuiTableColumnFlags.WidthFixed, 55);
         ImGui.TableSetupColumn("Duration"u8, ImGuiTableColumnFlags.WidthFixed, 80);
         ImGui.TableSetupColumn("Bonus"u8, ImGuiTableColumnFlags.WidthFixed, 40);
         ImGui.TableSetupColumn("Position"u8, ImGuiTableColumnFlags.WidthFixed, 240);

@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.SightseeingLog;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class SightseeingLogTab(SightseeingLogTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Sightseeing Log";
+    public override string Title => "探索笔记";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()

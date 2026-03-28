@@ -8,7 +8,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.AetherCurrents;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class AetherCurrentsTab(AetherCurrentsTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Aether Currents";
+    public override string Title => "风脉泉";
     public override bool DrawInChild => !AgentLobby.Instance()->IsLoggedIn;
 
     public UnlockProgress GetUnlockProgress()

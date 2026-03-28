@@ -45,8 +45,15 @@ public unsafe partial class AddressInspectorTab : DebugTab
 
     public override void Draw()
     {
-        _freeMemoryAddress ??= _sigScanner.ScanText("E8 ?? ?? ?? ?? 48 89 5D ?? 48 8B 74 24") - _sigScanner.Module.BaseAddress;
-
+        try
+        {
+            _freeMemoryAddress ??= _sigScanner.ScanText("E8 ?? ?? ?? ?? 48 89 5D ?? 48 8B 74 24") - _sigScanner.Module.BaseAddress;
+        }
+        catch (Exception e)
+        {
+            _logger.LogWarning("Find _freeMemoryAddress failed (E8 ?? ?? ?? ?? 48 89 5D ?? 48 8B 74 24): {Exception}", e);
+        }
+       
         if (_navigationService.CurrentNavigation is AddressInspectorNavigation navData)
         {
             _memoryAddress = navData.Address;

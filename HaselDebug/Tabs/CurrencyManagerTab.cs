@@ -17,7 +17,7 @@ public unsafe partial class CurrencyManagerTab : DebugTab
     private readonly ItemService _itemService;
     private readonly UnlocksTabUtils _unlocksTabUtils;
 
-    public override string Title => "CurrencyManager";
+    public override string Title => "货币";
 
     public override void Draw()
     {

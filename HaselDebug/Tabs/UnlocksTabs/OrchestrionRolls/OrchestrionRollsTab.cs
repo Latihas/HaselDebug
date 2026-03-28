@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.OrchestrionRolls;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class OrchestrionRollsTab(OrchestrionRollsTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Orchestrion Rolls";
+    public override string Title => "乐谱";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()

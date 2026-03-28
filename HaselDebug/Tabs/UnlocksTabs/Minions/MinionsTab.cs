@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.Minions;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class MinionsTab(MinionsTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Minions";
+    public override string Title => "宠物";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()

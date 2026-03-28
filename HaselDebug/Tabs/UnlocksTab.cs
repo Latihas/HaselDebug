@@ -34,8 +34,8 @@ public partial class UnlocksTab : DebugTab
         using var table = ImRaii.Table("UnlocksTable"u8, 2, ImGuiTableFlags.Borders | ImGuiTableFlags.RowBg, new Vector2(-1));
         if (!table) return;
 
-        ImGui.TableSetupColumn("Tab"u8, ImGuiTableColumnFlags.WidthFixed, 200);
-        ImGui.TableSetupColumn("Progress"u8, ImGuiTableColumnFlags.WidthFixed, 200);
+        ImGui.TableSetupColumn("分类"u8, ImGuiTableColumnFlags.WidthFixed, 200);
+        ImGui.TableSetupColumn("进度"u8, ImGuiTableColumnFlags.WidthFixed, 200);
         ImGui.TableSetupScrollFreeze(0, 1);
         ImGui.TableHeadersRow();
 
@@ -54,7 +54,7 @@ public partial class UnlocksTab : DebugTab
             ImGui.TableNextColumn();
             ImGui.Text(canShowProgress
                 ? $"{progress.NumUnlocked} / {progress.TotalUnlocks} ({progress.NumUnlocked / (float)progress.TotalUnlocks * 100f:0.00}%)"
-                : "Missing Data");
+                : "数据缺失");
         }
     }
 }

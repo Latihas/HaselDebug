@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.Recipes;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class RecipeTab(RecipesTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Recipes";
+    public override string Title => "制作配方";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()

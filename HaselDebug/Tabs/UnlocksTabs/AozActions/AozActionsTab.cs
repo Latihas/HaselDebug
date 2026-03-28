@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.AozActions;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class AozActionsTab(AozActionsTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Blue Mage Actions";
+    public override string Title => "青魔技能";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()

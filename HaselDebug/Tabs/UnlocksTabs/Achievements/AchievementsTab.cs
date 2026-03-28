@@ -10,7 +10,7 @@ public unsafe class AchievementsTab(AchievementsTable table) : DebugTab, IUnlock
 {
     private bool _achievementsRequested;
 
-    public override string Title => "Achievements";
+    public override string Title => "成就";
 
     public UnlockProgress GetUnlockProgress()
     {

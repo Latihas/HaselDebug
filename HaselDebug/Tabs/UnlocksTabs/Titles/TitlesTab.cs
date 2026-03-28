@@ -9,7 +9,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.Titles;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class TitlesTab(TitlesTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Titles";
+    public override string Title => "称号";
     public override bool DrawInChild => !AgentLobby.Instance()->IsLoggedIn;
 
     public UnlockProgress GetUnlockProgress()

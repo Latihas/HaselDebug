@@ -19,13 +19,13 @@ public partial class AetherytesTab : DebugTab
         if (!table) return;
 
         ImGui.TableSetupColumn("ID"u8, ImGuiTableColumnFlags.WidthFixed, 50);
-        ImGui.TableSetupColumn("Icon"u8, ImGuiTableColumnFlags.WidthFixed, 20);
-        ImGui.TableSetupColumn("Region Category"u8, ImGuiTableColumnFlags.WidthStretch);
-        ImGui.TableSetupColumn("Expansion Category"u8, ImGuiTableColumnFlags.WidthStretch);
-        ImGui.TableSetupColumn("Region Name"u8, ImGuiTableColumnFlags.WidthStretch);
-        ImGui.TableSetupColumn("Map Name"u8, ImGuiTableColumnFlags.WidthStretch);
-        ImGui.TableSetupColumn("Aetheryte Name"u8, ImGuiTableColumnFlags.WidthStretch);
-        ImGui.TableSetupColumn("Gil Cost"u8, ImGuiTableColumnFlags.WidthFixed, 80);
+        ImGui.TableSetupColumn("图标"u8, ImGuiTableColumnFlags.WidthFixed, 20);
+        ImGui.TableSetupColumn("地区分类"u8, ImGuiTableColumnFlags.WidthStretch);
+        ImGui.TableSetupColumn("版本分类"u8, ImGuiTableColumnFlags.WidthStretch);
+        ImGui.TableSetupColumn("地区名"u8, ImGuiTableColumnFlags.WidthStretch);
+        ImGui.TableSetupColumn("地图名"u8, ImGuiTableColumnFlags.WidthStretch);
+        ImGui.TableSetupColumn("水晶名"u8, ImGuiTableColumnFlags.WidthStretch);
+        ImGui.TableSetupColumn("传送费"u8, ImGuiTableColumnFlags.WidthFixed, 80);
 
         ImGui.TableSetupScrollFreeze(0, 1);
         ImGui.TableHeadersRow();

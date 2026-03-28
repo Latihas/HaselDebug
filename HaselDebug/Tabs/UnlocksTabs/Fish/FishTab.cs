@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.Fish;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class FishTab(FishTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Fish";
+    public override string Title => "钓鱼";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()

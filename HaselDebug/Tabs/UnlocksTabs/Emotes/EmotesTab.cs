@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.Emotes;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class EmotesTab(EmotesTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Emotes";
+    public override string Title => "情感动作";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()

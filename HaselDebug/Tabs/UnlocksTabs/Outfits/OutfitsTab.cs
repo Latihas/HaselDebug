@@ -6,7 +6,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.Outfits;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class OutfitsTab(OutfitsTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Outfits";
+    public override string Title => "套装";
 
     public UnlockProgress GetUnlockProgress()
     {

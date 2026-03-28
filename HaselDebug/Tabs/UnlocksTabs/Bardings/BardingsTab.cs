@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.Bardings;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class BardingsTab(BardingsTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "Bardings";
+    public override string Title => "鸟甲";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()

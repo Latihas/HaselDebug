@@ -7,7 +7,58 @@ namespace HaselDebug.Abstracts;
 public abstract partial class DebugTab : IDebugTab
 {
     private string? _title = null;
-    public virtual string Title => _title ??= NameRegex().Replace(TabRegex().Replace(GetType().Name, ""), "$1 $2");
+    public virtual string Title
+    {
+        get
+        {
+            if (_title == null)
+            {
+                var nm = NameRegex().Replace(TabRegex().Replace(GetType().Name, ""), "$1 $2");
+                _title = nm switch
+                {
+                    "Unlocks" => "收集",
+                    "Addon Config" => "Addon 设置",
+                    "Addon Factories" => "Addon 构造",
+                    "Addon Inspector" => "Addon 分析",
+                    "Addon Names" => "Addon 名称",
+                    "Address Inspector" => "地址 分析(有bug)",
+                    "Agent Map Event Markers" => "地图事件标记",
+                    "Atk Array Data" => "Atk 数据",
+                    "Atk Events" => "Atk 事件",
+                    "Atk Handler Calls" => "Atk 函数调用",
+                    "Beast Tribe" => "友好部族",
+                    "Chat" => "聊天",
+                    "Config" => "设置",
+                    "Excel" => "表格",
+                    "Furniture Catalog" => "家具",
+                    "Game Window" => "游戏窗口",
+                    "Aetherytes" => "传送水晶",
+                    "Territory Type" => "地图",
+                    "Territory Intended Use" => "地图 可用",
+                    "Special Shops" => "商店 特殊",
+                    "Shop" => "商店",
+                    "Sound Manager" => "声音",
+                    "Satisfaction Supply" => "老主顾",
+                    "Target" => "目标",
+                    "Inventory" => "物品栏",
+                    "Inventory Operations" => "物品栏 操作",
+                    "Instances" => "副本",
+                    "Instances Content Director" => "副本 Director",
+                    "Content Finder Duty List" => "副本 任务搜索器任务列表",
+                    "Input" => "输入",
+                    "Inclusion Shop" => "商店 Inclusion(?)",
+                    "Housing" => "房子",
+                    "Packet Logs" => "抓包",
+                    "Object Tables" => "物体",
+                    "Main Commands" => "快捷指令",
+                    "Local Player" => "玩家",
+                    "Item Actions" => "物品 使用",
+                    _ => nm
+                };
+            }
+            return _title;
+        }
+    }
     public ImmutableArray<IDebugTab>? SubTabs { get; protected set; }
     public virtual bool IsEnabled => true;
     public virtual bool IsPinnable => true;

@@ -7,7 +7,7 @@ namespace HaselDebug.Tabs.UnlocksTabs.HowTos;
 [RegisterSingleton<IUnlockTab>(Duplicate = DuplicateStrategy.Append)]
 public unsafe class HowTosTab(HowTosTable table) : DebugTab, IUnlockTab
 {
-    public override string Title => "HowTos";
+    public override string Title => "教学";
     public override bool DrawInChild => false;
 
     public UnlockProgress GetUnlockProgress()
