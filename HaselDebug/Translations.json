@@ -267,17 +267,17 @@
   "FeminineTitle.Label": {
     "en": "Feminine",
     "de": "Feminin",
-    "zh-hans": "女性称谓"
+    "zh-hans": "女性称号"
   },
   "MasculineTitle.Label": {
     "en": "Masculine",
     "de": "Maskulin",
-    "zh-hans": "男性称谓"
+    "zh-hans": "男性称号"
   },
   "HaselDebug.Tabs.UnlocksTabs.Titles.Columns.PrefixColumn.Label": {
     "en": "Prefix",
     "de": "Präfix",
-    "zh-hans": "前缀"
+    "zh-hans": "称号"
   },
   "HaselDebug.Tabs.UnlocksTabs.TripleTriadCards.Columns.NumberColumn.Label": {
     "en": "Number",

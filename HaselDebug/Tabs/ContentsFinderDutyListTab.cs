@@ -17,8 +17,8 @@ public unsafe partial class ContentsFinderDutyListTab : DebugTab
     {
         if (!TryGetAddon<AddonContentsFinder>("ContentsFinder", out var addon))
         {
-            ImGui.Text("ContentsFinder not open"u8);
-            if (ImGui.Button("Open"))
+            ImGui.Text("任务搜索器未打开"u8);
+            if (ImGui.Button("打开"))
             {
                 UIModule.Instance()->ExecuteMainCommand(33);
             }

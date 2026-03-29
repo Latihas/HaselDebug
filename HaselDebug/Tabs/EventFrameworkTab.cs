@@ -20,7 +20,7 @@ public unsafe partial class EventFrameworkTab : DebugTab, IDisposable
     private bool _logEnabled;
     private bool _isInitialized;
 
-    public override string Title => "EventFramework";
+    public override string Title => "事件";
     public override bool DrawInChild => false;
 
     private void Initialize()
@@ -69,7 +69,7 @@ public unsafe partial class EventFrameworkTab : DebugTab, IDisposable
 
     public void DrawOverviewTab()
     {
-        using var tab = ImRaii.TabItem("Overview");
+        using var tab = ImRaii.TabItem("概览");
         if (!tab) return;
 
         using var child = ImRaii.Child("OverviewTab", new Vector2(-1), true, ImGuiWindowFlags.NoSavedSettings);

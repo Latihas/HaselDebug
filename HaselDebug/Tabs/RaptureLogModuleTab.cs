@@ -15,15 +15,15 @@ public unsafe class RaptureLogModuleTab : DebugTab
     {
         var raptureLogModule = RaptureLogModule.Instance();
 
-        ImGui.Text($"CurrentLogIndex: {raptureLogModule->LogModule.LogMessageIndex}");
-        ImGui.Text($"LogMessageCount: {raptureLogModule->LogModule.LogMessageCount}");
+        ImGui.Text($"当前日志索引: {raptureLogModule->LogModule.LogMessageIndex}");
+        ImGui.Text($"日志消息数量: {raptureLogModule->LogModule.LogMessageCount}");
 
         if (ImGui.Button("清空"))
         {
             _messages.Clear();
         }
 
-        if (ImGui.Button("Read Messages"))
+        if (ImGui.Button("读取消息"))
         {
             _messages.Clear();
             for (var i = 0; i < raptureLogModule->LogModule.LogMessageCount; i++)
@@ -33,12 +33,12 @@ public unsafe class RaptureLogModuleTab : DebugTab
             }
         }
 
-        if (ImGui.InputText("PrintString", ref _input, 255, ImGuiInputTextFlags.EnterReturnsTrue))
+        if (ImGui.InputText("打印字符串", ref _input, 255, ImGuiInputTextFlags.EnterReturnsTrue))
         {
             raptureLogModule->PrintString(_input);
         }
 
-        if (ImGui.InputText("PrintMessage", ref _input, 255, ImGuiInputTextFlags.EnterReturnsTrue))
+        if (ImGui.InputText("打印消息", ref _input, 255, ImGuiInputTextFlags.EnterReturnsTrue))
         {
             using var sender = new Utf8String("me");
             using var message = new Utf8String(_input);

@@ -1,8 +1,7 @@
+#pragma warning disable PendingExcelSchema
 using HaselDebug.Abstracts;
 using HaselDebug.Interfaces;
 using UIColor = Lumina.Excel.Sheets.Experimental.UIColor;
-
-#pragma warning disable PendingExcelSchema
 
 namespace HaselDebug.Tabs;
 

@@ -190,15 +190,15 @@ public unsafe partial class SoundManagerTab : DebugTab, IDisposable
 
         _debugRenderer.DrawPointerType(manager);
 
-        using (var node = ImRaii.TreeNode("Play Sound", ImGuiTreeNodeFlags.SpanAvailWidth))
+        using (var node = ImRaii.TreeNode("播放音频", ImGuiTreeNodeFlags.SpanAvailWidth))
         {
             if (node)
             {
-                ImGui.InputText("Path"u8, ref _path);
-                ImGui.DragFloat("Volume"u8, ref _volume, 0.01f, 0f, 1f);
-                ImGui.InputUInt("FadeInDuration"u8, ref _fadeInDuration);
-                ImGui.DragFloat3("Position"u8, ref _position);
-                ImGui.DragFloat("Speed"u8, ref _speed, 0.01f, 0, 2);
+                ImGui.InputText("路径"u8, ref _path);
+                ImGui.DragFloat("响度"u8, ref _volume, 0.01f, 0f, 1f);
+                ImGui.InputUInt("渐变消失时长"u8, ref _fadeInDuration);
+                ImGui.DragFloat3("位置"u8, ref _position);
+                ImGui.DragFloat("速度"u8, ref _speed, 0.01f, 0, 2);
                 ImGui.InputInt("a9"u8, ref _a9);
                 ImGui.InputUInt("Track Index"u8, ref _soundNumber, 1);
                 ImGui.Checkbox("AutoRelease"u8, ref _autoRelease);
@@ -210,7 +210,7 @@ public unsafe partial class SoundManagerTab : DebugTab, IDisposable
                 ImGui.Checkbox("IsPositional"u8, ref _isPositional);
                 ImGui.Checkbox("a18"u8, ref _a18);
 
-                if (ImGui.Button("Play"))
+                if (ImGui.Button("播放"))
                 {
                     var sd = SoundManager.Instance()->PlaySound(
                         path: _path,
@@ -271,13 +271,13 @@ public unsafe partial class SoundManagerTab : DebugTab, IDisposable
 
             ImGui.TableNextColumn(); // Actions
 
-            if (ImGui.Button("Stop"))
+            if (ImGui.Button("停止"))
                 entry.Stop();
 
             ImGui.SameLine();
 
             var volume = entry.GetVolume();
-            if (ImGui.SliderFloat("Volume", ref volume, 0, 1))
+            if (ImGui.SliderFloat("响度", ref volume, 0, 1))
                 entry.SetVolume(volume, 0);
 
             ImGui.TableNextColumn(); // Struct

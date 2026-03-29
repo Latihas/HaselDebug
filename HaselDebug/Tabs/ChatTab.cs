@@ -20,7 +20,7 @@ public unsafe partial class ChatTab : DebugTab
 
         for (var i = 0; i < 4; i++)
         {
-            if (ImGui.Button($"Reload Tab #{i}"))
+            if (ImGui.Button($"重新加载栏#{i}"))
             {
                 raptureLogModule->ChatTabIsPendingReload[i] = true;
             }
@@ -31,17 +31,17 @@ public unsafe partial class ChatTab : DebugTab
         var start = *(int*)((nint)raptureLogModule + 0x18);
         var count = raptureLogModule->LogMessageCount - start;
 
-        ImGui.Text($"{count} Message");
+        ImGui.Text($"{count} 消息");
 
         using var table = ImRaii.Table("ChatTabTable"u8, 5, ImGuiTableFlags.Resizable | ImGuiTableFlags.Borders | ImGuiTableFlags.RowBg | ImGuiTableFlags.ScrollY | ImGuiTableFlags.NoSavedSettings);
         if (!table)
             return;
 
-        ImGui.TableSetupColumn("Timestamp"u8, ImGuiTableColumnFlags.WidthFixed, 120);
-        ImGui.TableSetupColumn("LogKind"u8, ImGuiTableColumnFlags.WidthFixed, 50);
-        ImGui.TableSetupColumn("Caster"u8, ImGuiTableColumnFlags.WidthFixed, 150);
-        ImGui.TableSetupColumn("Target"u8, ImGuiTableColumnFlags.WidthFixed, 150);
-        ImGui.TableSetupColumn("Formatted Message"u8, ImGuiTableColumnFlags.WidthStretch);
+        ImGui.TableSetupColumn("时间戳"u8, ImGuiTableColumnFlags.WidthFixed, 120);
+        ImGui.TableSetupColumn("日志类型"u8, ImGuiTableColumnFlags.WidthFixed, 50);
+        ImGui.TableSetupColumn("来源"u8, ImGuiTableColumnFlags.WidthFixed, 150);
+        ImGui.TableSetupColumn("目标"u8, ImGuiTableColumnFlags.WidthFixed, 150);
+        ImGui.TableSetupColumn("格式化消息"u8, ImGuiTableColumnFlags.WidthStretch);
         ImGui.TableSetupScrollFreeze(5, 1);
         ImGui.TableHeadersRow();
 

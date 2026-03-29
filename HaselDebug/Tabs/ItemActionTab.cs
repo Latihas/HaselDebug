@@ -18,7 +18,7 @@ public unsafe partial class ItemActionTab : DebugTab
     private ImmutableSortedDictionary<uint, ItemHandle[]> _dict;
     private Task? _loadTask;
 
-    public override string Title => "Item Actions";
+    public override string Title => "物品 使用";
 
     private void LoadData()
     {

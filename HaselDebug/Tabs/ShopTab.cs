@@ -20,7 +20,7 @@ public unsafe partial class ShopTab : DebugTab
     {
         if (!TryGetAddon<AddonShop>("Shop", out var addon))
         {
-            ImGui.Text("No Shop open!"u8);
+            ImGui.Text("没有打开的商店!"u8);
             return;
         }
 

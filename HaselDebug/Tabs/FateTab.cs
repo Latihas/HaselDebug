@@ -14,7 +14,7 @@ public partial class FateTab : DebugTab
     {
         if (_fateTable.Length == 0)
         {
-            ImGui.Text("No fates or data not ready."u8);
+            ImGui.Text("无Fate或数据不可用."u8);
             return;
         }
 

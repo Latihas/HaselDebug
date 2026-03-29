@@ -15,7 +15,7 @@ public unsafe partial class InclusionShopTab : DebugTab
     {
         if (!TryGetAddon<AtkUnitBase>("InclusionShop", out var addon))
         {
-            ImGui.Text("No shop open!"u8);
+            ImGui.Text("没有打开的商店!"u8);
             return;
         }
 

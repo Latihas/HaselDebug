@@ -39,7 +39,7 @@ public unsafe class AchievementsTab(AchievementsTable table) : DebugTab, IUnlock
         {
             using (ImRaii.Disabled(achievement->ProgressRequestState == Achievement.AchievementState.Requested))
             {
-                if (ImGui.Button("Request Achievements List"))
+                if (ImGui.Button("请求成就列表"))
                 {
                     AgentAchievement.Instance()->Show();
                     _achievementsRequested = true;

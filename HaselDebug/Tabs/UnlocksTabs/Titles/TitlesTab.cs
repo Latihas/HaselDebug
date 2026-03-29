@@ -46,7 +46,7 @@ public unsafe class TitlesTab(TitlesTable table) : DebugTab, IUnlockTab
         {
             using (ImRaii.Disabled(uiState->TitleList.DataPending))
             {
-                if (ImGui.Button("Request Title List"))
+                if (ImGui.Button("请求称号列表"))
                     uiState->TitleList.RequestTitleList();
             }
 

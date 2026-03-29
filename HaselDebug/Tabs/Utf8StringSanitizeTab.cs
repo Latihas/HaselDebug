@@ -174,7 +174,7 @@ public unsafe class Utf8StringSanitizeTab : DebugTab
 
     private bool _initialized;
 
-    public override string Title => "Utf8String Sanitize";
+    public override string Title => "Utf8字符串净化";
 
     private void Initialize()
     {

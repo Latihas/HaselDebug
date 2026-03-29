@@ -243,7 +243,7 @@ public unsafe partial class ExcelTab : DebugTab
         {
             CancelGlobalSearch();
         }
-        else if (!_isSearching && ImGui.Button("Search"))
+        else if (!_isSearching && ImGui.Button("搜索"))
         {
             StartGlobalSearch();
         }
