@@ -24,6 +24,16 @@
     "de": "HaselDebug-Konfiguration",
     "zh-hans": "HaselDebug设置"
   },
+  "Config.ShowInDevMenu.Label": {
+    "en": "Show in dev menu",
+    "de": "In Entwicklermenü anzeigen",
+    "zh-hans": "在开发菜单中显示"
+  },
+  "Config.ShowInDevMenu.Description": {
+    "en": "Adds a HaselDebug menu entry to the /xldev menu bar",
+    "de": "Fügt den Menüeintrag HaselDebug zur /xldev Menüleiste hinzu", 
+    "zh-hans": "在/xldev菜单栏中添加HaselDebug入口"
+  },
   "Config.AutoOpenPluginWindow.Label": {
     "en": "Auto-open HaselDebug",
     "de": "HaselDebug automatisch öffnen",
@@ -42,7 +52,12 @@
   "Config.ResolveAddonLifecycleVTables.Label": {
     "en": "Resolve original Addon vtables",
     "de": "Originale Addon vtables auflösen",
-    "zh-hans": "解析原生插件虚函数表"
+    "zh-hans": "解析原始Addon虚函数表"
+  },
+  "Config.ResolveAgentLifecycleVTables.Label": {
+    "en": "Resolve original Agent VTable addresses",
+    "de": "Originale Agent VTable-Addressen auflösen",
+    "zh-hans": "解析原始Agent虚函数表"
   },
   "Config.SpacesInKTKNames.Label": {
     "en": "Better readable KTK Node Names",
