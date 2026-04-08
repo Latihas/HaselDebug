@@ -2,6 +2,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using FFXIVClientStructs.FFXIV.Client.Network;
 using HaselDebug.Abstracts;
 using HaselDebug.Interfaces;
+using HaselDebug.Utils;
 using static HaselDebug.Tabs.PacketLogs.ActorControlLogTab;
 
 namespace HaselDebug.Tabs.PacketLogs;
@@ -78,22 +79,22 @@ public unsafe partial class ActorControlLogTab : PacketLogTab<ActorControlEntry>
             ImGui.Text(time.ToLongTimeString());
 
             ImGui.TableNextColumn();
-            ImGuiUtils.DrawCopyableText(payload.EntityId.ToString("X"));
+            ImGuiUtils.DrawCopyableText(payload.Value->EntityId.ToString("X"));
 
             ImGui.TableNextColumn();
-            ImGuiUtils.DrawCopyableText(payload.Category.ToString());
+            _debugRenderer.DrawNumeric(payload.Value->Category, typeof(uint), new NodeOptions() { HexOnShift = true });
 
             ImGui.TableNextColumn();
-            ImGuiUtils.DrawCopyableText(payload.Arg1.ToString());
+            _debugRenderer.DrawNumeric(payload.Value->Arg1, typeof(uint), new NodeOptions() { HexOnShift = true });
 
             ImGui.TableNextColumn();
-            ImGuiUtils.DrawCopyableText(payload.Arg2.ToString());
+            _debugRenderer.DrawNumeric(payload.Value->Arg2, typeof(uint), new NodeOptions() { HexOnShift = true });
 
             ImGui.TableNextColumn();
-            ImGuiUtils.DrawCopyableText(payload.Arg3.ToString());
+            _debugRenderer.DrawNumeric(payload.Value->Arg3, typeof(uint), new NodeOptions() { HexOnShift = true });
 
             ImGui.TableNextColumn();
-            ImGuiUtils.DrawCopyableText(payload.Arg4.ToString());
+            _debugRenderer.DrawNumeric(payload.Value->Arg4, typeof(uint), new NodeOptions() { HexOnShift = true });
         }
     }
 
