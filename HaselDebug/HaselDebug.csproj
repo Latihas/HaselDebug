@@ -3,11 +3,12 @@
   <!-- Project settings -->
   <PropertyGroup>
     <Name>HaselDebug</Name>
-    <Version>1.54.0</Version>
+    <Version>1.54.1</Version>
     <Author>Haselnussbomber</Author>
     <RepoUrl>https://github.com/Latihas/HaselDebug</RepoUrl>
     <Punchline>各种调试工具(汉化中)</Punchline>
     <Description>开发者工具</Description>
+    <DalamudApiLevel>15</DalamudApiLevel>
   </PropertyGroup>
 
   <!-- Build settings -->
