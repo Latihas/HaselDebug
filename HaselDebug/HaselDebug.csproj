@@ -3,7 +3,7 @@
   <!-- Project settings -->
   <PropertyGroup>
     <Name>HaselDebug</Name>
-    <Version>1.57.3</Version>
+    <Version>1.57.3.1</Version>
     <Author>Haselnussbomber</Author>
     <RepoUrl>https://github.com/Latihas/HaselDebug</RepoUrl>
     <Punchline>各种调试工具(汉化中)</Punchline>
