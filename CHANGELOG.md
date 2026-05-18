@@ -1,6 +1,40 @@
 # Changelog
 
-## [1.55.0] (2026-04-07)
+## [Unreleased]
+
+- **Fixed:** FixedSizeArray strings were reading until null terminator. This has been limited to the arrays length.
+- **Updated:** ClientStructs now at [cdd5def0](https://github.com/aers/FFXIVClientStructs/tree/cdd5def0) ([compare](https://github.com/aers/FFXIVClientStructs/compare/6e03f96a..cdd5def0)).
+
+## [1.57.3] (2026-05-12)
+
+- **Updated:** The Outfits table now has a toggle to only display sets with items storable in the Armoire.
+- **Updated:** The contrast between collected and non-collected items in the Outfits table was improved.
+- **Fixed:** The amount of collected sets didn't take sets stored in the Armoire into account.
+- **Updated:** ClientStructs now at [6e03f96a](https://github.com/aers/FFXIVClientStructs/tree/6e03f96a) ([compare](https://github.com/aers/FFXIVClientStructs/compare/a4901d90..6e03f96a)).
+
+## [1.57.2] (2026-05-10)
+
+- **Fixed:** Inherited fields of classes with multiple inheritance were displayed at incorrect offsets, because only the first vtable was taken into account.
+- **Updated:** ClientStructs now at [a4901d90](https://github.com/aers/FFXIVClientStructs/tree/a4901d90) ([compare](https://github.com/aers/FFXIVClientStructs/compare/b23bf540..a4901d90)).
+
+## [1.57.1] (2026-05-09)
+
+- **Fixed:** The Outfits tab was even more wrong. It's fixed now and now also supports sets storable in the Armoire.
+
+## [1.57.0] (2026-05-09)
+
+- **Added:** Director Update Log tab to inspect data from that packet.
+- **Fixed:** The Outfits tab was displaying unlocked items which are part of a set incorrectly. I hope that works properly now.^^
+- **Updated:** ClientStructs now at [b23bf540](https://github.com/aers/FFXIVClientStructs/tree/b23bf540) ([compare](https://github.com/aers/FFXIVClientStructs/compare/fcb5a932..b23bf540)).
+
+## [1.56.0] (2026-05-03)
+
+- **Added:** The Input tab now has a button to copy the values for the InputId enum.
+- **Added:** The Input tab now compares game values vs. InputId enum and will highlight if they match or not.
+- **Fixed:** The UIColor tab was updated to use new names in the experimental UIColor Lumina sheet.
+- **Updated:** ClientStructs now at [fcb5a932](https://github.com/aers/FFXIVClientStructs/tree/fcb5a932) ([compare](https://github.com/aers/FFXIVClientStructs/compare/d95cb0d6..fcb5a932)).
+
+## [1.55.0] (2026-04-30)
 
 - **Added:** Event Play and Event Yield Log tab to inspect data from those packets.
 - **Added:** A new Lgb Inspector tab to display information of the active layout.
@@ -863,7 +897,12 @@ Updated CS for 7.05hf1
 
 First release! 🥳
 
-[unreleased]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.55.0...main
+[unreleased]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.57.3...main
+[1.57.3]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.57.2...v1.57.3
+[1.57.2]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.57.1...v1.57.2
+[1.57.1]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.57.0...v1.57.1
+[1.57.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.56.0...v1.57.0
+[1.56.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.55.0...v1.56.0
 [1.55.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.54.0...v1.55.0
 [1.54.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.53.0...v1.54.0
 [1.53.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.52.0...v1.53.0
