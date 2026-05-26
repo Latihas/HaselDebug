@@ -1,9 +1,21 @@
 # Changelog
 
-## [Unreleased]
+## [1.58.2] (2026-05-19)
 
+- **Updated:** Clicking on the set name in the Outfits tab now previews the full set.
+- **Updated:** ClientStructs now at [1c23f405](https://github.com/aers/FFXIVClientStructs/tree/1c23f405) ([compare](https://github.com/aers/FFXIVClientStructs/compare/4909a842..1c23f405)).
+
+## [1.58.1] (2026-05-19)
+
+- **Updated:** Gathering Items tab now shows collectible icon on names and has a new Type column (except for Key Items, because I don't care).
+- **Updated:** ClientStructs now at [4909a842](https://github.com/aers/FFXIVClientStructs/tree/4909a842) ([compare](https://github.com/aers/FFXIVClientStructs/compare/b60db3d9..4909a842)).
+
+## [1.58.0] (2026-05-19)
+
+- **Added:** A new unlocks tab Gathering Items.
 - **Fixed:** FixedSizeArray strings were reading until null terminator. This has been limited to the arrays length.
-- **Updated:** ClientStructs now at [cdd5def0](https://github.com/aers/FFXIVClientStructs/tree/cdd5def0) ([compare](https://github.com/aers/FFXIVClientStructs/compare/6e03f96a..cdd5def0)).
+- **Updated:** Datashare keys for custom node types. (Thanks to @MidoriKami)
+- **Updated:** ClientStructs now at [b60db3d9](https://github.com/aers/FFXIVClientStructs/tree/b60db3d9) ([compare](https://github.com/aers/FFXIVClientStructs/compare/6e03f96a..b60db3d9)).
 
 ## [1.57.3] (2026-05-12)
 
@@ -897,7 +909,10 @@ Updated CS for 7.05hf1
 
 First release! 🥳
 
-[unreleased]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.57.3...main
+[unreleased]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.58.2...main
+[1.58.2]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.58.1...v1.58.2
+[1.58.1]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.58.0...v1.58.1
+[1.58.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.57.3...v1.58.0
 [1.57.3]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.57.2...v1.57.3
 [1.57.2]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.57.1...v1.57.2
 [1.57.1]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.57.0...v1.57.1
