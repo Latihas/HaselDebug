@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.59.2] (2026-06-02)
+
+Update for Patch 7.51.
+
+- **Updated:** ClientStructs now at [5deef083](https://github.com/aers/FFXIVClientStructs/tree/5deef083) ([compare](https://github.com/aers/FFXIVClientStructs/compare/af278e8f..5deef083)).
+
+## [1.59.1] (2026-05-29)
+
+- **Fixed:** The callback handler of an addon is now properly resolved via ParentId, if set.
+- **Updated:** ClientStructs now at [af278e8f](https://github.com/aers/FFXIVClientStructs/tree/af278e8f) ([compare](https://github.com/aers/FFXIVClientStructs/compare/9f95801b..af278e8f)).
+
+## [1.59.0] (2026-05-28)
+
+- **Added:** An Exd Module tab for checking out sheets in ExdModule.
+- **Updated:** Private fields are now displayed with a dimmed green color.
+- **Updated:** The following types now have special handling:
+  - `ExcelSheet.ColumnDefinitions` is now drawn as array.
+  - `FileAccessPath` is now drawn as string.
+  - The TreeNode of a `Math.Size` now shows the dimensions.
+  - ILayoutInstances with type `InstanceType.EnvLocation` are now drawn resolved as `EnvLocationLayoutInstance`.
+- **Updated:** May have improved performance by using `Attribute.IsDefined` more.
+- **Fixed:** `AgentInterface` can no longer be pinned by accident.
+- **Updated:** ClientStructs now at [9f95801b](https://github.com/aers/FFXIVClientStructs/tree/9f95801b) ([compare](https://github.com/aers/FFXIVClientStructs/compare/1c23f405..9f95801b)).
+
 ## [1.58.2] (2026-05-19)
 
 - **Updated:** Clicking on the set name in the Outfits tab now previews the full set.
@@ -909,7 +933,10 @@ Updated CS for 7.05hf1
 
 First release! 🥳
 
-[unreleased]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.58.2...main
+[unreleased]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.59.2...main
+[1.59.2]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.59.1...v1.59.2
+[1.59.1]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.59.0...v1.59.1
+[1.59.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.58.2...v1.59.0
 [1.58.2]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.58.1...v1.58.2
 [1.58.1]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.58.0...v1.58.1
 [1.58.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.57.3...v1.58.0
