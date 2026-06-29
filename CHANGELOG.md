@@ -1,5 +1,49 @@
 # Changelog
 
+## [1.61.0] (2026-06-26)
+
+- **Added:** Event Complete Log tab to inspect data passed to the `PacketDispatcher.SendEventCompletePacket` function.
+- **Updated:** Lgb Inspector: Reworked to show all layouts in their own tab (Global, Active, Unk28, Prefetch).
+- **Fixed:** Lgb Inspector: Non-active instances are now expandable.
+- **Fixed:** Lgb Inspector: Instances with the same InstanceKey and LayerKey are now expandable. For that u0 and SubId were added to the TreeNodes label.
+- **Updated:** ClientStructs now at [b81ab14d](https://github.com/aers/FFXIVClientStructs/tree/b81ab14d) ([compare](https://github.com/aers/FFXIVClientStructs/compare/bd339349..b81ab14d)).
+
+## [1.60.3] (2026-06-23)
+
+- **Fixed:** The TypeBase type was incorrect now. I'm not paying enough attention.
+
+## [1.60.2] (2026-06-23)
+
+- **Fixed:** The plugin wouldn't load properly due to outdated sig for TypeBase in the Inventory Operations tab.
+
+## [1.60.1] (2026-06-23)
+
+- **Updated:** ILayoutInstances with type `InstanceType.PrefetchRange` are now drawn resolved as `PrefetchRangeLayoutInstance`. I forgot.
+
+## [1.60.0] (2026-06-23)
+
+Update for Patch 7.51 HotFix 2.
+
+- **Added:** A new Prepare Zoning Log tab.
+- **Added:** A new known string pointer `WarpInfo.TerritoryTypeBg`.
+- **Updated:** ILayoutInstances with type `InstanceType.ExitRange` are now drawn resolved as `ExitRangeLayoutInstance`.
+- **Updated:** ILayoutInstances with type `InstanceType.LineVfx` are now drawn resolved as `LineVfxLayoutInstance`.
+- **Updated:** ClientStructs now at [bd339349](https://github.com/aers/FFXIVClientStructs/tree/bd339349) ([compare](https://github.com/aers/FFXIVClientStructs/compare/04d9d3df..bd339349)).
+
+## [1.59.4] (2026-06-17)
+
+- **Updated:** ProcessInfoService is now disposing faster.
+- **Updated:** ClientStructs now at [04d9d3df](https://github.com/aers/FFXIVClientStructs/tree/04d9d3df) ([compare](https://github.com/aers/FFXIVClientStructs/compare/bad8d3f2..04d9d3df)).
+
+## [1.59.3] (2026-06-02)
+
+Update for Patch 7.51 HotFix.
+
+- **Added:** Actor Cast Packet Log tab to inspect data from that packet.
+- **Updated:** Added `RaptureAtkModule.NamePlateInfo.NameOverride` as known string pointer.
+- **Fixed:** FixedSizeArray strings were not reading until null terminator withing the array length.
+- **Updated:** ClientStructs now at [bad8d3f2](https://github.com/aers/FFXIVClientStructs/tree/bad8d3f2) ([compare](https://github.com/aers/FFXIVClientStructs/compare/5deef083..bad8d3f2)).
+
 ## [1.59.2] (2026-06-02)
 
 Update for Patch 7.51.
@@ -933,7 +977,14 @@ Updated CS for 7.05hf1
 
 First release! 🥳
 
-[unreleased]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.59.2...main
+[unreleased]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.61.0...main
+[1.61.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.60.3...v1.61.0
+[1.60.3]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.60.2...v1.60.3
+[1.60.2]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.60.1...v1.60.2
+[1.60.1]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.60.0...v1.60.1
+[1.60.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.59.4...v1.60.0
+[1.59.4]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.59.3...v1.59.4
+[1.59.3]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.59.2...v1.59.3
 [1.59.2]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.59.1...v1.59.2
 [1.59.1]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.59.0...v1.59.1
 [1.59.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.58.2...v1.59.0
