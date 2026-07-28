@@ -19,7 +19,7 @@ public unsafe partial class ConfigTab : DebugTab
     {
         ref var commonSystemConfig = ref Framework.Instance()->SystemConfig;
 
-        if (ImGui.Button("复制到CS"))
+        if (ImGui.Button("Copy enum for CS"))
         {
             var sb = new StringBuilder();
             var dict = new Dictionary<int, string>();
@@ -34,7 +34,7 @@ public unsafe partial class ConfigTab : DebugTab
 
         ImGui.SameLine();
 
-        if (ImGui.Button("复制到Dalamud"))
+        if (ImGui.Button("Copy enum for Dalamud"))
         {
             var sb = new StringBuilder();
 
@@ -54,10 +54,13 @@ public unsafe partial class ConfigTab : DebugTab
         using var tabBar = ImRaii.TabBar("ConfigTabs");
         if (!tabBar) return;
 
-        DrawConfigTab(ref commonSystemConfig.SystemConfigBase.ConfigBase, "系统");
-        DrawConfigTab(ref commonSystemConfig.UiConfig, "UI设置");
-        DrawConfigTab(ref commonSystemConfig.UiControlConfig, "UI控制");
-        DrawConfigTab(ref commonSystemConfig.UiControlGamepadConfig, "UI控制器");
+        DrawConfigTab(ref commonSystemConfig.SystemConfigBase.ConfigBase, "System");
+        DrawConfigTab(ref commonSystemConfig.UiConfig, "UiConfig");
+        DrawConfigTab(ref commonSystemConfig.UiControlConfig, "UiControl");
+        DrawConfigTab(ref commonSystemConfig.UiControlGamepadConfig, "UiControlGamepad");
+
+        ref var devConfig = ref Framework.Instance()->DevConfig;
+        DrawConfigTab(ref devConfig.DevConfigBase.ConfigBase, "Dev");
     }
 
     private int GetNumSearchResults(ref ConfigBase configBase)

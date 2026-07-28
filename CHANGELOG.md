@@ -1,5 +1,54 @@
 # Changelog
 
+## [1.65.2] (2026-07-28)
+
+- **Added:** ILayoutInstances type redirect for TreasureLayoutInstance.
+- **Added:** ILayoutInstances type redirect for types Aetheryte, Gathering, EventObject and Character. These are currently using the parent class GameObjectLayoutInstance.
+- **Fixed:** Active ILayoutInstances were greyed out. (That still doesn't mean active ones are visible, hmm..)
+- **Updated:** ClientStructs now at [cc474ca9](https://github.com/aers/FFXIVClientStructs/tree/cc474ca9) ([compare](https://github.com/aers/FFXIVClientStructs/compare/3e2b738f..cc474ca9)).
+
+## [1.65.1] (2026-07-28)
+
+Second update for Patch 7.55.
+
+- **Fixed:** Broken sig in InventoryOperationsTab preventing the plugin from loading.
+- **Updated:** ClientStructs now at [3e2b738f](https://github.com/aers/FFXIVClientStructs/tree/3e2b738f) ([compare](https://github.com/aers/FFXIVClientStructs/compare/b2e56484..3e2b738f)).
+
+## [1.65.0] (2026-07-28)
+
+Update for Patch 7.55.
+
+- **Added:** Fate Reward Log tab to inspect data from that packet.
+- **Updated:** ClientStructs now at [b2e56484](https://github.com/aers/FFXIVClientStructs/tree/b2e56484) ([compare](https://github.com/aers/FFXIVClientStructs/compare/502941fe..b2e56484)).
+
+## [1.64.0] (2026-07-26)
+
+- **Added:** ILayoutInstances type redirect for PopRangeLayoutInstance.
+- **Added:** Support for sequencial structs like System.Numerics.Vector2/3/4.
+- **Updated:** ClientStructs now at [502941fe](https://github.com/aers/FFXIVClientStructs/tree/502941fe) ([compare](https://github.com/aers/FFXIVClientStructs/compare/af24e2e9..502941fe)).
+
+## [1.63.0] (2026-07-15)
+
+- **Added:** The Config tab now has a tab to inspect the DevConfig.
+- **Updated:** ClientStructs now at [af24e2e9](https://github.com/aers/FFXIVClientStructs/tree/af24e2e9) ([compare](https://github.com/aers/FFXIVClientStructs/compare/dbe41718..af24e2e9)).
+
+## [1.62.1] (2026-07-09)
+
+- **Added:** A context menu was added to the Beast Tribes and Custom Deliveries names to open the location on the map.
+- **Fixed:** The coordinates of the closest aetherytes (used for Beast Tribes and Custom Deliveries) were not calculated correctly.
+
+## [1.62.0] (2026-07-09)
+
+- **Added:** ResourceHandler type redirects based their the FileType.
+- **Added:** Toast tab to log the different toasts. (Thanks to @Jaksuhn)
+  - I have reworked the implementation to not use Dalamuds IToastGui service and instead hook the functions directly. Sorry if this is not what you wanted.
+- **Updated:** ClientStructs now at [dbe41718](https://github.com/aers/FFXIVClientStructs/tree/dbe41718) ([compare](https://github.com/aers/FFXIVClientStructs/compare/cb804dc0..dbe41718)).
+
+## [1.61.1] (2026-07-06)
+
+- **Updated:** TreeNodes for AtkComponentTreeListItem now display their first string as label for simpler identification.
+- **Updated:** ClientStructs now at [cb804dc0](https://github.com/aers/FFXIVClientStructs/tree/cb804dc0) ([compare](https://github.com/aers/FFXIVClientStructs/compare/b81ab14d..cb804dc0)).
+
 ## [1.61.0] (2026-06-26)
 
 - **Added:** Event Complete Log tab to inspect data passed to the `PacketDispatcher.SendEventCompletePacket` function.
@@ -977,7 +1026,15 @@ Updated CS for 7.05hf1
 
 First release! 🥳
 
-[unreleased]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.61.0...main
+[unreleased]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.65.2...main
+[1.65.2]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.65.1...v1.65.2
+[1.65.1]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.65.0...v1.65.1
+[1.65.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.64.0...v1.65.0
+[1.64.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.63.0...v1.64.0
+[1.63.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.62.1...v1.63.0
+[1.62.1]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.62.0...v1.62.1
+[1.62.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.61.1...v1.62.0
+[1.61.1]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.61.0...v1.61.1
 [1.61.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.60.3...v1.61.0
 [1.60.3]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.60.2...v1.60.3
 [1.60.2]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.60.1...v1.60.2
