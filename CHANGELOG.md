@@ -1,5 +1,44 @@
 # Changelog
 
+## [1.68.0] (2026-08-07)
+
+Update for Patch 7.55hf1.
+
+- **Added:** Type redirects for Atk components XBMItem and XBMContentStageEventMap.
+- **Added:** A MKDRelicGrowth tab to test QuestCustomTodoManager, and to be an example of how it works. This requires to be on the quest "Aether, Aether, Everywhere".
+- **Added:** A Server Request Callback Log tab to log server responses for those requests. Due to how it's coded, it's not under the Packet Logs category and only shows the payload as hex, sorry.
+- **Added:** EventSceneTaskInterface type redirects, based on their EventSceneTaskType, for PlayCutSceneTask and PlayStaffRollTask.
+- **Updated:** The Tasks tab in the Event Framework tab now draws the EventSceneTaskInterface struct.
+- **Fixed:** Packet Log tabs did not free the allocated memory for packet copies when clearing records or on unloading the plugin.
+- **Updated:** ClientStructs now at [8121cbbc](https://github.com/aers/FFXIVClientStructs/tree/8121cbbc) ([compare](https://github.com/aers/FFXIVClientStructs/compare/de18d8b2..8121cbbc)).
+
+## [1.67.0] (2026-07-31)
+
+6-7, hehe.
+
+- **Added:** A Resource Handle tab to load and inspect resource handles by path.
+- **Updated:** ClientStructs now at [de18d8b2](https://github.com/aers/FFXIVClientStructs/tree/de18d8b2) ([compare](https://github.com/aers/FFXIVClientStructs/compare/cc474ca9..de18d8b2)).
+
+## [1.66.0] (2026-07-30)
+
+- **Added:** A Chara Card Packet Log tab to inspect data from that packet.
+- **Added:** Unlock Span Length Test tab now supports PlayerState.UnlockedFramersKitsBitArray.
+- **Added:** ILayoutInstances type redirects for the following types:
+  - LightLayoutInstance
+  - VfxLayoutInstance
+  - EventNpcLayoutInstance
+  - BattleNpcLayoutInstance
+  - CharacterLayoutInstance
+  - AetheryteLayoutInstance
+  - EnvSpaceLayoutInstance
+  - GatheringLayoutInstance
+  - WeaponLayoutInstance
+  - EventObjectLayoutInstance
+  - ChairMarkerLayoutInstance
+  - ClickableRangeLayoutInstance
+  - FateRangeLayoutInstance
+- **Updated:** ClientStructs now at [4a00dc68](https://github.com/aers/FFXIVClientStructs/tree/4a00dc68) ([compare](https://github.com/aers/FFXIVClientStructs/compare/cc474ca9..4a00dc68)).
+
 ## [1.65.2] (2026-07-28)
 
 - **Added:** ILayoutInstances type redirect for TreasureLayoutInstance.
@@ -1026,7 +1065,10 @@ Updated CS for 7.05hf1
 
 First release! 🥳
 
-[unreleased]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.65.2...main
+[unreleased]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.68.0...main
+[1.68.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.67.0...v1.68.0
+[1.67.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.66.0...v1.67.0
+[1.66.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.65.2...v1.66.0
 [1.65.2]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.65.1...v1.65.2
 [1.65.1]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.65.0...v1.65.1
 [1.65.0]: https://github.com/Haselnussbomber/HaselDebug/compare/v1.64.0...v1.65.0
