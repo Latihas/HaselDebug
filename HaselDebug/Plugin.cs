@@ -1,6 +1,5 @@
 using System.Threading;
 using System.Threading.Tasks;
-using HaselDebug.Config;
 
 namespace HaselDebug;
 
@@ -8,18 +7,15 @@ namespace HaselDebug;
 public partial class Plugin : IAsyncDalamudPlugin
 {
     private readonly IDalamudPluginInterface _pluginInterface;
-    private readonly IFramework _framework;
-    private IHost _host;
+    private Host _host;
 
     [AutoPostConstruct]
     private void Initialize()
     {
         _host = new HostBuilder()
-            .UseContentRoot(_pluginInterface.AssemblyLocation.Directory!.FullName)
             .ConfigureServices(services =>
             {
-                services.AddDalamud(_pluginInterface);
-                services.AddConfig(PluginConfig.Load(_pluginInterface));
+                services.AddSingleton(_pluginInterface);
                 services.AddHaselCommon();
                 services.AddHaselDebug();
             })
@@ -29,18 +25,18 @@ public partial class Plugin : IAsyncDalamudPlugin
     public Task LoadAsync(CancellationToken cancellationToken)
     {
         _pluginInterface.InitializeCustomClientStructs();
-        return _host.StartOnFrameworkThread(_framework, cancellationToken);
+        return _host.StartAsync(cancellationToken);
     }
 
     public async ValueTask DisposeAsync()
     {
         try
         {
-            await _host.StopOnFrameworkThread(_framework).ConfigureAwait(false);
+            await _host.StopAsync().ConfigureAwait(false);
         }
         finally
         {
-            _host.Dispose();
+            await _host.DisposeAsync().ConfigureAwait(false);
         }
     }
 }

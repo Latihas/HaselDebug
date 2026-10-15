@@ -2,7 +2,6 @@ using System.Text;
 using FFXIVClientStructs.FFXIV.Client.Game.UI;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using HaselCommon.Gui.ImGuiTable;
-using HaselDebug.Extensions;
 using HaselDebug.Utils;
 
 namespace HaselDebug.Tabs.UnlocksTabs.Outfits.Columns;
@@ -48,11 +47,11 @@ public partial class ItemsColumn : ColumnString<MirageStoreSetItem>
             if (item.RowId == 0)
                 continue;
 
-            var isItemInInventory = OutfitsTable.IsItemInInventory(item);
-            var isItemInDresser = _mirageService.IsItemCollected(item);
+            var isItemInInventory = OutfitsTable.IsItemInInventory(item.RowId);
+            var isItemInDresser = _mirageService.IsItemCollected(item.RowId);
             var isItemCollectedInPartialSet = _mirageService.IsSetSlotCollected(row.RowId, slotIndex);
-            var isCabinetSupported = _cabinetService.TryGetCabinetId(item, out _);
-            var isItemInCabinet = isCabinetSupported && _cabinetService.IsItemCollected(item);
+            var isCabinetSupported = _cabinetService.TryGetCabinetId(item.RowId, out _);
+            var isItemInCabinet = isCabinetSupported && _cabinetService.IsItemCollected(item.RowId);
 
             var isItemCollected = isFullSetCollected || isItemCollectedInPartialSet || isItemInCabinet || isItemInDresser || isItemInInventory;
 
@@ -77,27 +76,39 @@ public partial class ItemsColumn : ColumnString<MirageStoreSetItem>
             if (ImGui.IsItemHovered())
             {
                 ImGui.SetMouseCursor(ImGuiMouseCursor.Hand);
-                _unlocksTabUtils.DrawItemTooltip(item.Value,
-                    description: true switch
-                    {
-                        _ when isFullSetCollected => _textService.GetAddonText(15643), // Used as part of an outfit glamour.
-                        _ when isItemCollectedInPartialSet => _textService.GetAddonText(15636), // Outfit Glamour-ready Item
-                        _ when isItemInDresser => "In Glamour Dresser",
-                        _ when isItemInCabinet => "In Armoire",
-                        _ when isItemInInventory => "In Inventory",
-                        _ => "",
-                    });
+
+                _stringBuilder.Clear();
+
+                if (isFullSetCollected)
+                {
+                    _stringBuilder.AppendLine(_textService.GetAddonText(15643)); // Used as part of an outfit glamour.
+                }
+                else if (isItemCollectedInPartialSet)
+                {
+                    _stringBuilder.AppendLine(_textService.GetAddonText(15636)); // Outfit Glamour-ready Item
+                }
+
+                if (isItemInDresser)
+                    _stringBuilder.AppendLine("In Glamour Dresser");
+
+                if (isItemInCabinet)
+                    _stringBuilder.AppendLine("In Armoire");
+
+                if (isItemInInventory)
+                    _stringBuilder.AppendLine("In Inventory");
+
+                _unlocksTabUtils.DrawItemTooltip(item.RowId, description: _stringBuilder.ToString());
             }
 
             ImGuiContextMenu.Draw($"###SetItem_{row.RowId}_{item.RowId}_ItemContextMenu", builder =>
             {
-                builder.AddRestoreItem(item);
-                builder.AddViewOutfitGlamourReadyItems(item);
-                builder.AddTryOn(item);
-                builder.AddItemFinder(item);
-                builder.AddCopyItemName(item);
-                builder.AddItemSearch(item);
-                builder.AddSearchCraftingMethod(item);
+                builder.AddRestoreItem(item.RowId);
+                builder.AddViewOutfitGlamourReadyItems(item.RowId);
+                builder.AddTryOn(item.RowId);
+                builder.AddItemFinder(item.RowId);
+                builder.AddCopyItemName(item.RowId);
+                builder.AddItemSearch(item.RowId);
+                builder.AddSearchCraftingMethod(item.RowId);
                 builder.AddOpenOnGarlandTools("item", item.RowId);
             });
 

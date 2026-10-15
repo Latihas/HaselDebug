@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Dalamud.Utility;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.Graphics;
+using FFXIVClientStructs.FFXIV.Client.System.Framework;
 using FFXIVClientStructs.FFXIV.Client.System.Resource.Handle;
 using FFXIVClientStructs.FFXIV.Client.UI;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using FFXIVClientStructs.FFXIV.Common.Component.Excel;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using FFXIVClientStructs.STD;
-using HaselDebug.Extensions;
 using HaselDebug.Utils;
 using static FFXIVClientStructs.FFXIV.Component.GUI.AtkUldManager;
 
@@ -323,6 +323,22 @@ public unsafe partial class DebugRenderer
             return;
         }
 
+        // AddonListIcon.ItemData
+        if (parentType == typeof(AddonListIcon) && fieldType == typeof(AddonListIcon.ItemData*) && fieldInfo.Name == nameof(AddonListIcon.ListData))
+        {
+            DrawFieldName(fieldInfo);
+            DrawArray(new Span<AddonListIcon.ItemData>(((AddonListIcon*)address)->ListData, ((AddonListIcon*)address)->TotalItemCount), fieldNodeOptions);
+            return;
+        }
+
+        // GameWindow.Arguments
+        if (parentType == typeof(GameWindow) && fieldType == typeof(CStringPointer*) && fieldInfo.Name == nameof(GameWindow.Arguments))
+        {
+            DrawFieldName(fieldInfo);
+            DrawArray(((GameWindow*)address)->ArgumentsSpan, fieldNodeOptions);
+            return;
+        }
+
         // ByteColor.RGBA
         if (parentType == typeof(ByteColor) && fieldType == typeof(uint) && fieldInfo.Name == nameof(ByteColor.RGBA))
         {
@@ -437,6 +453,21 @@ public unsafe partial class DebugRenderer
         {
             DrawFieldName(fieldInfo);
             DrawPointerType(fieldAddress, fieldType, fieldNodeOptions with { Title = (*(FFXIVClientStructs.FFXIV.Common.Math.Size*)fieldAddress).ToString() });
+            return;
+        }
+
+        if (fieldType == typeof(Guid))
+        {
+            var guidString = (*(Guid*)fieldAddress).ToString();
+            DrawFieldName(fieldInfo);
+            DrawPointerType(fieldAddress, fieldType, fieldNodeOptions with
+            {
+                Title = guidString,
+                DrawContextMenu = (nodeOptions, builder) =>
+                {
+                    builder.AddCopyValueString(guidString);
+                }
+            });
             return;
         }
 

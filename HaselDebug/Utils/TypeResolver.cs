@@ -10,7 +10,6 @@ using FFXIVClientStructs.FFXIV.Client.LayoutEngine.Layer;
 using FFXIVClientStructs.FFXIV.Client.System.Resource.Handle;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using FFXIVClientStructs.FFXIV.Component.GUI;
-using HaselDebug.Extensions;
 using DrawObjectType = FFXIVClientStructs.FFXIV.Client.Graphics.Scene.ObjectType;
 using EventHandler = FFXIVClientStructs.FFXIV.Client.Game.Event.EventHandler;
 using InstanceContentType = FFXIVClientStructs.FFXIV.Client.Game.InstanceContent.InstanceContentType;
@@ -405,8 +404,8 @@ public static unsafe class TypeResolver
                     type = typeof(Decal);
                     break;
 
-                case DrawObjectType.UnkType10:
-                    type = typeof(DrawObject);
+                case DrawObjectType.CullingBox:
+                    type = typeof(CullingBox);
                     break;
             }
         }
@@ -437,6 +436,10 @@ public static unsafe class TypeResolver
 
                 case EventHandlerContent.Aetheryte:
                     type = typeof(AetheryteEventHandler);
+                    break;
+
+                case EventHandlerContent.GuildLeveAssignment:
+                    type = typeof(GuildleveAssignmentEventHandler);
                     break;
 
                 case EventHandlerContent.Craft:
@@ -477,6 +480,7 @@ public static unsafe class TypeResolver
                     {
                         InstanceContentType.DeepDungeon => typeof(InstanceContentDeepDungeon),
                         InstanceContentType.OceanFishing => typeof(InstanceContentOceanFishing),
+                        InstanceContentType.CrucibleOfTheUnbroken => typeof(InstanceContentCrucibleOfTheUnbroken),
                         _ => typeof(InstanceContentDirector)
                     };
                     additionalName = ((InstanceContentDirector*)address)->InstanceContentType.ToString();
