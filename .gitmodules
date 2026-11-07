@@ -3,7 +3,7 @@
 	url = https://github.com/Haselnussbomber/HaselCommon.git
 [submodule "FFXIVClientStructs"]
 	path = FFXIVClientStructs
-	url = https://github.com/aers/FFXIVClientStructs.git
+	url = https://github.com/Dalamud-DailyRoutines/FFXIVClientStructs.git
 [submodule "Lumina.Excel"]
 	path = Lumina.Excel
 	url = https://github.com/NotAdam/Lumina.Excel.git
