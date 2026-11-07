@@ -2,18 +2,18 @@
   "HaselDebug.CommandHandlerHelpMessage": {
     "en": "Show/hide the HaselDebug window",
     "de": "Zeige/verstecke das HaselDebug-Fenster",
-    "zh-hans": "显示/隐藏HaselDebug窗口"
+    "zh": "显示/隐藏HaselDebug窗口"
   },
 
   "TitleBarButton.ToggleConfig.Tooltip.OpenConfig": {
     "en": "Open Configuration",
     "de": "Konfiguration öffnen",
-    "zh-hans": "打开设置"
+    "zh": "打开设置"
   },
   "TitleBarButton.ToggleConfig.Tooltip.CloseConfig": {
     "en": "Close Configuration",
     "de": "Konfiguration schließen",
-    "zh-hans": "关闭设置"
+    "zh": "关闭设置"
   },
 
   "PluginWindow.Title": {
@@ -22,156 +22,156 @@
   "ConfigWindow.Title": {
     "en": "HaselDebug Configuration",
     "de": "HaselDebug-Konfiguration",
-    "zh-hans": "HaselDebug设置"
+    "zh": "HaselDebug设置"
   },
   "Config.ShowInDevMenu.Label": {
     "en": "Show in dev menu",
     "de": "In Entwicklermenü anzeigen",
-    "zh-hans": "在开发菜单中显示"
+    "zh": "在开发菜单中显示"
   },
   "Config.ShowInDevMenu.Description": {
     "en": "Adds a HaselDebug menu entry to the /xldev menu bar",
     "de": "Fügt den Menüeintrag HaselDebug zur /xldev Menüleiste hinzu", 
-    "zh-hans": "在/xldev菜单栏中添加HaselDebug入口"
+    "zh": "在/xldev菜单栏中添加HaselDebug入口"
   },
   "Config.AutoOpenPluginWindow.Label": {
     "en": "Auto-open HaselDebug",
     "de": "HaselDebug automatisch öffnen",
-    "zh-hans": "自动打开HaselDebug"
+    "zh": "自动打开HaselDebug"
   },
   "Config.EnableLuaLogger.Label": {
     "en": "Enable LuaLogger",
     "de": "LuaLogger aktivieren",
-    "zh-hans": "启用LuaLogger"
+    "zh": "启用LuaLogger"
   },
   "Config.EnableLuaLogger.Description": {
     "en": "Writes print and panics to the Debug log.",
     "de": "Schreibt print und panics in die Debug-Log.",
-    "zh-hans": "将print输出与异常信息写入调试日志"
+    "zh": "将print输出与异常信息写入调试日志"
   },
   "Config.ResolveAddonLifecycleVTables.Label": {
     "en": "Resolve original Addon vtables",
     "de": "Originale Addon vtables auflösen",
-    "zh-hans": "解析原始Addon虚函数表"
+    "zh": "解析原始Addon虚函数表"
   },
   "Config.ResolveAgentLifecycleVTables.Label": {
     "en": "Resolve original Agent VTable addresses",
     "de": "Originale Agent VTable-Addressen auflösen",
-    "zh-hans": "解析原始Agent虚函数表"
+    "zh": "解析原始Agent虚函数表"
   },
   "Config.SpacesInKTKNames.Label": {
     "en": "Better readable KTK Node Names",
     "de": "Besser lesbare KTK-Node-Namen",
-    "zh-hans": "优化KTK节点名称可读性"
+    "zh": "优化KTK节点名称可读性"
   },
   "Config.SpacesInKTKNames.Description": {
     "en": "Adds spaces between words in node names ('ExampleName' -> 'Example Name').",
     "de": "Fügt Leerzeichen zwischen Wörtern in Knotennamen ein ('BeispielName' -> 'Beispiel Name').",
-    "zh-hans": "在节点名称的单词间添加空格 ('ExampleName' -> 'Example Name')"
+    "zh": "在节点名称的单词间添加空格 ('ExampleName' -> 'Example Name')"
   },
 
   "SearchBar.Hint": {
     "en": "Search...",
     "de": "Suchen...",
-    "zh-hans": "搜索..."
+    "zh": "搜索..."
   },
 
   "ContextMenu.GoToAddressInspector": {
     "en": "Open in Address Inspector",
     "de": "In Address Inspector öffnen",
-    "zh-hans": "在地址查看器中打开"
+    "zh": "在地址查看器中打开"
   },
   "ContextMenu.CopyText": {
     "en": "Copy text",
     "de": "Text kopieren",
-    "zh-hans": "复制文本"
+    "zh": "复制文本"
   },
   "ContextMenu.CopyValueString": {
     "en": "Copy: {0}",
     "de": "Kopieren: {0}",
-    "zh-hans": "复制：{0}"
+    "zh": "复制：{0}"
   },
   "ContextMenu.CopyRowId": {
     "en": "Copy RowId",
     "de": "RowId kopieren",
-    "zh-hans": "复制RowId"
+    "zh": "复制RowId"
   },
   "ContextMenu.CopyName": {
     "en": "Copy name",
     "de": "Name kopieren",
-    "zh-hans": "复制名称"
+    "zh": "复制名称"
   },
   "ContextMenu.CopyAddress": {
     "en": "Copy address",
     "de": "Addresse kopieren",
-    "zh-hans": "复制地址"
+    "zh": "复制地址"
   },
   "ContextMenu.OpenInArchive": {
     "en": "Open in Journal",
     "de": "Im Archiv öffnen",
-    "zh-hans": "在日志中打开"
+    "zh": "在日志中打开"
   },
   "ContextMenu.PinnedInstances.Pin": {
     "en": "Pin instance",
     "de": "Instanz anpinnen",
-    "zh-hans": "固定实例"
+    "zh": "固定实例"
   },
   "ContextMenu.PinnedInstances.Unpin": {
     "en": "Unpin instance",
     "de": "Instanz lösen",
-    "zh-hans": "取消固定实例"
+    "zh": "取消固定实例"
   },
   "ContextMenu.TabPopout": {
     "en": "Open in new window",
     "de": "In neuem Fenster öffnen",
-    "zh-hans": "在新窗口打开"
+    "zh": "在新窗口打开"
   },
   "ContextMenu.GameObject.DisableDraw": {
     "en": "Disable draw",
     "de": "Ausblenden",
-    "zh-hans": "禁用绘制"
+    "zh": "禁用绘制"
   },
   "ContextMenu.GameObject.EnableDraw": {
     "en": "Enable draw",
     "de": "Einblenden",
-    "zh-hans": "启用绘制"
+    "zh": "启用绘制"
   },
   "ContextMenu.Agent.Show": {
     "en": "Show Agent",
     "de": "Agent einblenden",
-    "zh-hans": "显示Agent"
+    "zh": "显示Agent"
   },
   "ContextMenu.Agent.Hide": {
     "en": "Hide Agent",
     "de": "Agent ausblenden",
-    "zh-hans": "隐藏Agent"
+    "zh": "隐藏Agent"
   },
 
   "UnlockedColumn.Label": {
     "en": "Unlocked",
     "de": "Freigeschaltet",
-    "zh-hans": "已解锁"
+    "zh": "已解锁"
   },
   "CategoryColumn.Label": {
     "en": "Category",
     "de": "Kategorie",
-    "zh-hans": "分类"
+    "zh": "分类"
   },
   "NameColumn.Label": {
     "en": "Name",
-    "zh-hans": "名称"
+    "zh": "名称"
   },
   "CompletedColumn.Label": {
     "en": "Completed",
     "de": "Abgeschlossen",
-    "zh-hans": "已完成"
+    "zh": "已完成"
   },
   "IndexColumn.Label": {
     "en": "Index"
   },
   "ZoneColumn.Label": {
     "en": "Zone",
-    "zh-hans": "区域"
+    "zh": "区域"
   },
   "RowIdColumn.Label": {
     "en": "RowId"
@@ -179,7 +179,7 @@
   "CaughtColumn.Label": {
     "en": "Caught",
     "de": "Gefangen",
-    "zh-hans": "记录"
+    "zh": "记录"
   },
   "GatheredColumn.Label": {
     "en": "Gathered",
@@ -192,79 +192,79 @@
   "ItemColumn.Label": {
     "en": "Item",
     "de": "Gegenstand",
-    "zh-hans": "物品"
+    "zh": "物品"
   },
   "PatchColumn.Label": {
     "en": "Patch",
-    "zh-hans": "版本"
+    "zh": "版本"
   },
   "HaselDebug.Tabs.SpecialShopsRowColumn.Label": {
     "en": "Shop",
-    "zh-hans": "商店"
+    "zh": "商店"
   },
   "HaselDebug.Tabs.UnlocksTabs.AetherCurrents.Columns.LocationColumn.Label": {
     "en": "Location",
     "de": "Ort",
-    "zh-hans": "位置"
+    "zh": "位置"
   },
   "HaselDebug.Tabs.UnlocksTabs.AozActions.Columns.NumberColumn.Label": {
     "en": "Number",
     "de": "Nummer",
-    "zh-hans": "编号"
+    "zh": "编号"
   },
   "HaselDebug.Tabs.UnlocksTabs.AozActions.Columns.ActionColumn.Label": {
     "en": "Action",
     "de": "Kommando",
-    "zh-hans": "技能"
+    "zh": "技能"
   },
   "HaselDebug.Tabs.UnlocksTabs.AozActions.Columns.LocationColumn.Label": {
     "en": "Where to Learn",
     "de": "Erlernbar in",
-    "zh-hans": "习得地点"
+    "zh": "习得地点"
   },
   "HaselDebug.Tabs.UnlocksTabs.Bardings.Columns.ItemColumn.Label": {
     "en": "Item",
     "de": "Gegenstand",
-    "zh-hans": "物品"
+    "zh": "物品"
   },
   "HaselDebug.Tabs.UnlocksTabs.Cutscenes.Columns.PathColumn.Label": {
     "en": "Path",
     "de": "Pfad",
-    "zh-hans": "路径"
+    "zh": "路径"
   },
   "HaselDebug.Tabs.UnlocksTabs.Cutscenes.Columns.SeenColumn.Label": {
     "en": "Seen",
     "de": "Gesehen",
-    "zh-hans": "已观看"
+    "zh": "已观看"
   },
   "HaselDebug.Tabs.UnlocksTabs.Cutscenes.Columns.UsesColumn.Label": {
     "en": "Uses",
     "de": "Nutzungen",
-    "zh-hans": "使用次数"
+    "zh": "使用次数"
   },
   "HaselDebug.Tabs.UnlocksTabs.Cutscenes.Columns.WorkIndexColumn.Label": {
     "en": "WorkIndex",
-    "zh-hans": "作品索引"
+    "zh": "作品索引"
   },
   "HaselDebug.Tabs.UnlocksTabs.OrchestrionRolls.Columns.NumberColumn.Label": {
     "en": "Number",
     "de": "Nummer",
-    "zh-hans": "编号"
+    "zh": "编号"
   },
   "HaselDebug.Tabs.UnlocksTabs.Emotes.Columns.CanUseColumn.Label": {
     "en": "Usable",
     "de": "Benutzbar",
-    "zh-hans": "可使用"
+    "zh": "可使用"
   },
   "HaselDebug.Tabs.UnlocksTabs.Emotes.Columns.ItemColumn.Label": {
     "en": "Item",
     "de": "Gegenstand",
-    "zh-hans": "物品"
+    "zh": "物品"
   },
   "HaselDebug.Tabs.UnlocksTabs.Outfits.Columns.ItemsColumn.Label": {
     "en": "Items",
     "de": "Gegenstände",
-    "zh-hans": "物品"
+    "zh": "物品"
   },
   "HaselDebug.Tabs.UnlocksTabs.Outfits.Columns.StoreItemColumn.Label": {
     "en": "Online Store"
@@ -275,56 +275,56 @@
   },
   "HaselDebug.Tabs.UnlocksTabs.Outfits.Columns.SetColumn.Label": {
     "en": "Set",
-    "zh-hans": "套装"
+    "zh": "套装"
   },
   "HaselDebug.Tabs.UnlocksTabs.Quests.Columns.QuestIdColumn.Label": {
     "en": "Id"
   },
   "HaselDebug.Tabs.UnlocksTabs.Quests.Columns.QuestStatusColumn.Label": {
     "en": "Status",
-    "zh-hans": "状态"
+    "zh": "状态"
   },
   "HaselDebug.Tabs.UnlocksTabs.Quests.Columns.RepeatableColumn.Label": {
     "en": "Repeatable",
     "de": "Wiederholbar",
-    "zh-hans": "可重复"
+    "zh": "可重复"
   },
   "HaselDebug.Tabs.UnlocksTabs.Recipes.Columns.ItemCategoryColumn.Label": {
     "en": "Item Category",
     "de": "Gegenstandskategorie",
-    "zh-hans": "物品分类"
+    "zh": "物品分类"
   },
   "FeminineTitle.Label": {
     "en": "Feminine",
     "de": "Feminin",
-    "zh-hans": "女性称号"
+    "zh": "女性称号"
   },
   "MasculineTitle.Label": {
     "en": "Masculine",
     "de": "Maskulin",
-    "zh-hans": "男性称号"
+    "zh": "男性称号"
   },
   "HaselDebug.Tabs.UnlocksTabs.Titles.Columns.PrefixColumn.Label": {
     "en": "Prefix",
     "de": "Präfix",
-    "zh-hans": "称号"
+    "zh": "称号"
   },
   "HaselDebug.Tabs.UnlocksTabs.TripleTriadCards.Columns.NumberColumn.Label": {
     "en": "Number",
     "de": "Nummer",
-    "zh-hans": "编号"
+    "zh": "编号"
   },
   "HaselDebug.Tabs.UnlocksTabs.UnlockLinks.Columns.UnlocksColumn.Label": {
     "en": "Sheet/Row",
-    "zh-hans": "表/行"
+    "zh": "表/行"
   },
   "HaselDebug.Tabs.UnlocksTabs.UnlockLinks.Columns.UnlocksNameColumn.Label": {
     "en": "Name",
-    "zh-hans": "名称"
+    "zh": "名称"
   },
   "HaselDebug.Tabs.UnlocksTabs.Items.Columns.TypeColumn.Label": {
     "en": "Type",
-    "zh-hans": "类型"
+    "zh": "类型"
   },
   "HaselDebug.Tabs.UnlocksTabs.GatheringItems.Columns.TypeColumn.All": {
     "en": "All",
@@ -358,43 +358,43 @@
   "FurnitureCatalogTab.OpenButton.Label": {
     "en": "Open {0}",
     "de": "Öffne {0}",
-    "zh-hans": "打开{0}"
+    "zh": "打开{0}"
   },
   "FurnitureCatalogTab.AlertText": {
     "en": "Items are placeable once the corresponding preview window is opened.",
     "de": "Gegenstände sind platzierbar sobald das Katalog-Fenster geöffnet ist.",
-    "zh-hans": "打开对应预览窗口后即可放置物品"
+    "zh": "打开对应预览窗口后即可放置物品"
   },
 
   "UnlocksTab.CabinetNotLoaded": {
     "en": "Armoire not loaded",
     "de": "Kostbarkeitenkabinett nicht geladen",
-    "zh-hans": "衣柜未加载"
+    "zh": "衣柜未加载"
   },
   "UnlocksTab.PrismBoxNotLoaded": {
     "en": "Glamour Dresser not loaded",
     "de": "Projektionskommode nicht geladen",
-    "zh-hans": "幻化柜未加载"
+    "zh": "幻化柜未加载"
   },
   "UnlocksTab.StoredInCabinet": {
     "en": "Stored in Armoire",
     "de": "Im Kostbarkeitenkabinett gelagert",
-    "zh-hans": "已存入衣柜"
+    "zh": "已存入衣柜"
   },
   "UnlocksTab.NotStoredInCabinet": {
     "en": "Not stored in Armoire",
     "de": "Nicht im Kostbarkeitenkabinett gelagert",
-    "zh-hans": "未存入衣柜"
+    "zh": "未存入衣柜"
   },
   "UnlocksTab.StoredInPrismBox": {
     "en": "Stored in Glamour Dresser",
     "de": "In der Projektionskommode gelagert",
-    "zh-hans": "已存入幻化柜"
+    "zh": "已存入幻化柜"
   },
   "UnlocksTab.NotStoredInPrismBox": {
     "en": "Not stored in Glamour Dresser",
     "de": "Nicht in der Projektionskommode gelagert",
-    "zh-hans": "未存入幻化柜"
+    "zh": "未存入幻化柜"
   },
 
   "template": {
@@ -402,6 +402,6 @@
     "de": "",
     "fr": "",
     "ja": "",
-    "zh-hans": ""
+    "zh": ""
   }
 }
